@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace ToDoList.Models
+namespace AnimalShelter.Models
 {
-  public class ToDoListContext : DbContext
+  public class AnimalShelterContext : DbContext
   {
-    public DbSet<Item> Items { get; set; }
+    public DbSet<Animal> Animals { get; set; }
 
-    public ToDoListContext(DbContextOptions options) : base(options) { }
+    public AnimalShelter(DbContextOptions options) : base(options) { }
   }
 }
