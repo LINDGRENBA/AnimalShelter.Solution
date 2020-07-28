@@ -17,7 +17,7 @@ namespace AnimalShelter.Controllers
 
     public ActionResult Index()
     {
-      List<Animal> model = _db.Animals.ToList();
+      List<Animal> model = _db.Animals.OrderBy(animal => animal.Type).ToList();
       return View(model);
     }
 
@@ -59,6 +59,7 @@ namespace AnimalShelter.Controllers
       _db.Animals.Remove(thisAnimal);
       _db.SaveChanges();
       return RedirectToAction("Index");
+
     }
     public ActionResult Details(int id)
     {
