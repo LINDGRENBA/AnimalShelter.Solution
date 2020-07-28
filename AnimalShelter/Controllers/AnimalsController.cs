@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using AnimalShelter.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace AnimalShelter.Controllers
 {
@@ -34,7 +35,7 @@ namespace AnimalShelter.Controllers
     }
     public ActionResult Details(int id)
     {
-      Animal thisAnimal = _db.Animals.FirstOrDefault(items => animals.AnimalId == id);
+      Animal thisAnimal = _db.Animals.FirstOrDefault(animals => animals.AnimalId == id);
       return View(thisAnimal);
     }
   }
