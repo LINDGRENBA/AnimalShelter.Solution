@@ -12,6 +12,15 @@
     <br>
     @Html.LabelFor(model => model.Type)
     @Html.TextBoxFor(model => model.Type)
+    <br>
+    @Html.LabelFor(model => model.Gender)
+    @Html.TextBoxFor(model => model.Gender)
+    <br>
+    @Html.LabelFor(model => model.DateOfAdmittance)
+    @Html.TextBoxFor(model => model.DateOfAdmittance)
+    <br>
+    @Html.LabelFor(model => model.Breed)
+    @Html.TextBoxFor(model => model.Breed)
     <input type="submit" value="Add new animal" />
 }
 <p>@Html.ActionLink("Show all animals", "Index")</p>
