@@ -4,7 +4,7 @@
 
 @model AnimalShelter.Models.Animal
 
-<h4>Add a new animal</h4>
+<h3>Add a new animal</h3>
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
@@ -17,7 +17,7 @@
   @Html.TextBoxFor(model => model.Gender)
   <br>
   @Html.LabelFor(model => model.DateOfAdmittance)
-  @Html.TextBoxFor(model => model.DateOfAdmittance)
+  @Html.TextBoxFor(model => model.DateOfAdmittance, new {@type = "date"})
   <br>
   @Html.LabelFor(model => model.Breed)
   @Html.TextBoxFor(model => model.Breed)

@@ -17,7 +17,7 @@ namespace AnimalShelter.Controllers
 
     public ActionResult Index()
     {
-      List<Animal> model = _db.Animals.OrderBy(animal => animal.Type).ToList();
+      List<Animal> model = _db.Animals.OrderBy(animal => animal.DateOfAdmittance).ToList();
       return View(model);
     }
 
